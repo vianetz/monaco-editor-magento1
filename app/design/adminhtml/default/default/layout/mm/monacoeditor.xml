@@ -1,13 +1,5 @@
 <?xml version="1.0"?>
 <layout>
-   <adminhtml_cms_block_edit>
-       <update handle="mm_monacoeditor" ifconfig="cms/mm_monacoeditor/enabled" />
-    </adminhtml_cms_block_edit>
-
-    <adminhtml_cms_page_edit>
-        <update handle="mm_monacoeditor" ifconfig="cms/mm_monacoeditor/enabled" />
-    </adminhtml_cms_page_edit>
-
     <!-- <adminhtml_catalog_product_edit>
         <update handle="mm_monacoeditor" />
     </adminhtml_catalog_product_edit>
@@ -22,11 +14,15 @@
 
     <adminhtml_catalog_category_edit>
         <update handle="mm_monacoeditor" />
-    </adminhtml_catalog_category_edit>
+    </adminhtml_catalog_category_edit> -->
 
     <adminhtml_system_email_template_edit>
         <update handle="mm_monacoeditor" />
-    </adminhtml_system_email_template_edit> -->
+    </adminhtml_system_email_template_edit>
+
+    <editor>
+       <update handle="mm_monacoeditor" ifconfig="cms/mm_monacoeditor/enabled" />
+    </editor>
 
     <mm_monacoeditor>
         <reference name="head">

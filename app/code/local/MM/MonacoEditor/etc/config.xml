@@ -35,11 +35,11 @@
         <events>
             <cms_wysiwyg_config_prepare>
                 <observers>
-                    <mm_moancoeditor>
+                    <mm_monacoeditor>
                         <type>singleton</type>
                         <class>MM_MonacoEditor_Model_Observer</class>
                         <method>disableWysywygEditor</method>
-                    </mm_moancoeditor>
+                    </mm_monacoeditor>
                 </observers>
             </cms_wysiwyg_config_prepare>
         </events>
@@ -52,6 +52,34 @@
                 <editorjs_url_prefix>https://unpkg.com/monaco-editor@latest/min/</editorjs_url_prefix>
                 <tailwindcss>1</tailwindcss>
                 <tailwindcss_prefix_value>tw-</tailwindcss_prefix_value>
+                <textarea_config>
+                    <cms_page>
+                        <page_content>
+                            <id>page_content</id>
+                            <language>html</language>
+                        </page_content>
+                        <page_layout_update_xml>
+                            <id>page_layout_update_xml</id>
+                            <language>xml</language>
+                        </page_layout_update_xml>
+                        <page_custom_layout_update_xml>
+                            <id>page_custom_layout_update_xml</id>
+                            <language>xml</language>
+                        </page_custom_layout_update_xml>
+                    </cms_page>
+                    <cms_block>
+                        <block_content>
+                            <id>block_content</id>
+                            <language>html</language>
+                        </block_content>
+                    </cms_block>
+                    <system_email_template>
+                        <template_text>
+                            <id>template_text</id>
+                            <language>html</language>
+                        </template_text>
+                    </system_email_template>
+                </textarea_config>
             </mm_monacoeditor>
         </cms>
     </default>
