@@ -79,6 +79,16 @@
                             <language>html</language>
                         </template_text>
                     </system_email_template>
+                    <catalog_product>
+                        <description>
+                            <id>description</id>
+                            <language>html</language>
+                        </description>
+                        <short_description>
+                            <id>short_description</id>
+                            <language>html</language>
+                        </short_description>
+                    </catalog_product>
                 </textarea_config>
             </mm_monacoeditor>
         </cms>

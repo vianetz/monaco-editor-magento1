@@ -1,3 +1,8 @@
 .hor-scroll {
     overflow: initial;
 }
+
+.form-list td.value .monaco-editor {
+    height: 30em;
+    width: 90%;
+}

@@ -20,6 +20,10 @@
         <update handle="mm_monacoeditor" />
     </adminhtml_system_email_template_edit>
 
+    <adminhtml_system_config_edit>
+        <update handle="mm_monacoeditor" />
+    </adminhtml_system_config_edit>
+
     <editor>
        <update handle="mm_monacoeditor" ifconfig="cms/mm_monacoeditor/enabled" />
     </editor>
