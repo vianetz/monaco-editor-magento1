@@ -1,11 +1,12 @@
 <?php
+
 class MM_MonacoEditor_Helper_Data extends Mage_Core_Helper_Abstract
 {
     const XML_PATH_CONFIG_TAILWINDCSS_ENABLED = 'cms/mm_monacoeditor/tailwindcss';
     const XML_PATH_CONFIG_TAILWINDCSS_PREFIX_ENABLED = 'cms/mm_monacoeditor/tailwindcss_prefix';
     const XML_PATH_CONFIG_TAILWINDCSS_PREFIX = 'cms/mm_monacoeditor/tailwindcss_prefix_value';
-    const XML_PATH_CONFIG_DISABLE_WYSIWYG_BLOCKS = 'cms/mm_monacoeditor/disable_wysywyg_static_block';
-    const XML_PATH_CONFIG_DISABLE_WYSIWYG_PAGES = 'cms/mm_monacoeditor/disable_wysywyg_static_page';
+    const XML_PATH_CONFIG_DISABLE_WYSIWYG_BLOCKS = 'cms/wysiwyg/disable_wysiwyg_static_block';
+    const XML_PATH_CONFIG_DISABLE_WYSIWYG_PAGES = 'cms/wysiwyg/disable_wysiwyg_static_page';
 
     public function isTailwindcssEnabled(int $storeId = null): bool
     {
@@ -22,22 +23,22 @@ class MM_MonacoEditor_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfig(self::XML_PATH_CONFIG_TAILWINDCSS_PREFIX, $storeId);
     }
 
-    /** @return array<string> */
+    /** @return list<string> */
     public function getDisabledWysiwygBlocks(int $storeId = null): array
     {
         $disabledEntityIds = Mage::getStoreConfig(self::XML_PATH_CONFIG_DISABLE_WYSIWYG_BLOCKS, $storeId);
-        if (!$disabledEntityIds) {
+        if (! $disabledEntityIds) {
             return [];
         }
 
         return explode(',', $disabledEntityIds);
     }
 
-    /** @return array<string> */
+    /** @return list<string> */
     public function getDisabledWysiwygPages(int $storeId = null): array
     {
         $disabledEntityIds = Mage::getStoreConfig(self::XML_PATH_CONFIG_DISABLE_WYSIWYG_PAGES, $storeId);
-        if (!$disabledEntityIds) {
+        if (! $disabledEntityIds) {
             return [];
         }
 

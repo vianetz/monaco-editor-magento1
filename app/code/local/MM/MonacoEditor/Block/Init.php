@@ -1,25 +1,25 @@
 <?php
+
 class MM_MonacoEditor_Block_Init extends Mage_Core_Block_Template
 {
     /**
      * return json encoded array of textareas id and language
      */
-    public function getTextAreas(): string
+    public function getTextAreas(): ?string
     {
-        $textareas = [];
         $controller = Mage::app()->getRequest()->getControllerName();
 
         $config = Mage::getStoreConfig('cms/mm_monacoeditor/textarea_config');
-        if (isset($config[$controller])) {
-            $textareas = $config[$controller];
+        if (! isset($config[$controller])) {
+            return null;
         }
 
-        return Zend_Json::encode(array_values($textareas), false, ['enableJsonExprFinder' => true]);
+        return Zend_Json::encode(array_values($config[$controller]), false, ['enableJsonExprFinder' => true]);
     }
 
     public function isWysiwygEnabledByDefault(): bool
     {
-        return Mage::getStoreConfig('cms/wysiwyg/enabled') === 'enabled';
+        return Mage::getStoreConfig('cms/wysiwyg/enabled') === Mage_Cms_Model_Wysiwyg_Config::WYSIWYG_ENABLED;
     }
 
     public function getEditorJsUrl(string $fileName = ''): string

@@ -56,26 +56,30 @@
                                 <tailwindcss_prefix>1</tailwindcss_prefix>
                             </depends>
                         </tailwindcss_prefix_value>
-                        <disable_wysywyg_static_block translate="label">
-                            <label>Disable Wysywyg Static Blocks</label>
+                    </fields>
+                </mm_monacoeditor>
+                <wysiwyg>
+                    <fields>
+                        <disable_wysiwyg_static_block translate="label">
+                            <label>Disable WYSIWYG for Static Blocks</label>
                             <frontend_type>multiselect</frontend_type>
                             <sort_order>50</sort_order>
                             <source_model>mm_monacoeditor/system_config_source_cms_blocks</source_model>
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
-                        </disable_wysywyg_static_block>
-                        <disable_wysywyg_static_page translate="label">
-                            <label>Disable Wysywyg Cms Pages</label>>
+                        </disable_wysiwyg_static_block>
+                        <disable_wysiwyg_static_page translate="label">
+                            <label>Disable WYSIWYG for Cms Pages</label>>
                             <frontend_type>multiselect</frontend_type>
                             <sort_order>51</sort_order>
                             <source_model>adminhtml/system_config_source_cms_page</source_model>
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
-                        </disable_wysywyg_static_page>
+                        </disable_wysiwyg_static_page>
                     </fields>
-                </mm_monacoeditor>
+                </wysiwyg>
             </groups>
         </cms>
     </sections>

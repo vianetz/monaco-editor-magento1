@@ -38,7 +38,7 @@
                     <mm_monacoeditor>
                         <type>singleton</type>
                         <class>MM_MonacoEditor_Model_Observer</class>
-                        <method>disableWysywygEditor</method>
+                        <method>disableWysiwygEditor</method>
                     </mm_monacoeditor>
                 </observers>
             </cms_wysiwyg_config_prepare>

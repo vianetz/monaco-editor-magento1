@@ -1,7 +1,8 @@
 <?php
+
 final class MM_MonacoEditor_Model_Observer
 {
-    public function disableWysywygEditor(Varien_Event_Observer $observer): void
+    public function disableWysiwygEditor(Varien_Event_Observer $observer): void
     {
         if (! $this->_shouldEntityBeDisabled()) {
             return;
