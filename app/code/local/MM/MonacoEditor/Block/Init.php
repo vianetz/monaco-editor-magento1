@@ -5,7 +5,7 @@ class MM_MonacoEditor_Block_Init extends Mage_Core_Block_Template
     /**
      * return json encoded array of textareas id and language
      */
-    public function getTextAreas(): ?string
+    public function getTextAreasAsJson(): ?string
     {
         $controller = Mage::app()->getRequest()->getControllerName();
 
@@ -25,5 +25,10 @@ class MM_MonacoEditor_Block_Init extends Mage_Core_Block_Template
     public function getEditorJsUrl(string $fileName = ''): string
     {
         return Mage::getStoreConfig('cms/mm_monacoeditor/editorjs_url_prefix') . $fileName;
+    }
+
+    public function getEmmetJsUrl(string $fileName = ''): string
+    {
+        return Mage::getStoreConfig('cms/mm_monacoeditor/emmetjs_url_prefix') . $fileName;
     }
 }

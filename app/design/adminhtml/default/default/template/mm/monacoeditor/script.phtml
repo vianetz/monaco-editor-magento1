@@ -1,10 +1,10 @@
 <?php /** @var \MM_MonacoEditor_Block_Init $this */ ?>
 
-<?php if ($this->getTextAreas()): ?>
+<?php if ($this->getTextAreasAsJson()): ?>
 <script src="<?= $this->getEditorJsUrl('vs/loader.js') ?>"></script>
-<script src="<?= $this->getEditorJsUrl('emmet-monaco.min.js') ?>"></script>
+<script src="<?= $this->getEmmetJsUrl('emmet-monaco.min.js') ?>"></script>
 <script type="text/javascript">
-    let _textareas = <?= $this->getTextAreas() ?>;
+    let _textareas = <?= $this->getTextAreasAsJson() ?>;
 
     require.config({ paths: { 'vs': '<?= $this->getEditorJsUrl('vs') ?>' }});
     window.MonacoEnvironment = { getWorkerUrl: () => proxy };
@@ -23,7 +23,7 @@
         monaco.editor.onDidCreateEditor(editor => setTimeout(() => {
             //Object.extend(Array.prototype, Enumerable);
             Array.prototype.include = oldArrayPrototype;
-        }, 1000));
+        }, 2000));
         // end fix prototypejs bug
 
         let theme = (window.matchMedia("(prefers-color-scheme: dark)").matches) ? "vs-dark" : "vs";

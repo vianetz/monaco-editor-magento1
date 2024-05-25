@@ -39,6 +39,19 @@ Monaco Editor is enabled by default in all supported content.
     - Set Custom Tailwindcss Prefix ['tw-']
 - Disable WYSYWYG Editor for specific Static Blocks and Pages
 
+### Optionally use local JavaScript libraries
+By default the JavaScript libraries are fetched from the unpkg.com CDN. If you want to use local libraries instead, simply add this to any `config.xml`:
+```xml
+<default>
+  <cms>
+    <mm_monacoeditor>
+      <editorjs_url_prefix>{{secure_base_url}}js/monaco-editor/</editorjs_url_prefix>
+      <emmetjs_url_prefix>{{secure_base_url}}js/monaco-editor/</emmetjs_url_prefix>
+    </mm_monacoeditor>
+  </cms>
+</default>
+```
+Afterwards copy the libraries into `js/monaco-editor/`.
 
 ## Known issues:
 
